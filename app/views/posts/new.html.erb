@@ -1,0 +1,20 @@
+<h1>(敬語入力フォーム)</h1>
+<h3>新規投稿ページ</h3>
+<%= form_for @post do |f| %>
+
+  <div class="field">
+    <%= f.label :投稿したい敬語  %>
+    <%= f.text_area :keigo, :size => "30x2" %>
+  </div>
+  <div class="field">
+    <%= f.label :敬語を使用した相手 %>
+    <%= f.text_field :name, :size => 30 %>
+  </div>
+  <div class="field">
+    <%= f.label :投稿日時  %>
+    <%= f.datetime_select :datetime, :size => "30x2" %>
+  </div>
+  <%= f.submit "敬語を投稿する" %>
+<% end %>
+
+<%= link_to "敬語一覧に戻る", posts_path %>

@@ -1,0 +1,15 @@
+<%= form_for @post do |f| %>
+    <div class="post-edit">
+    <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name, :size => 30 %>
+  </div>
+
+  <div class="field">
+    <%= f.label :keigo  %>
+    <%= f.text_area :keigo, :size => "30x2" %>
+  </div>
+ 
+    <%= f.submit "編集する" %>
+  <% end %>
+  </div>
